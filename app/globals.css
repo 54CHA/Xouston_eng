@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Onest', sans-serif;
+  }
+  
+  :root {
+    --background-rgb: 255, 255, 255;
+    --foreground-rgb: 0, 0, 0;
+    --border-rgb: 229, 231, 235;
+
+    --card: 255, 255, 255;
+    --card-foreground: 0, 0, 0;
+
+    --primary: 79, 70, 229;
+    --primary-foreground: 255, 255, 255;
+
+    --secondary: 244, 244, 245;
+    --secondary-foreground: 0, 0, 0;
+
+    --muted: 244, 244, 245;
+    --muted-foreground: 107, 114, 128;
+
+    --accent: 244, 244, 245;
+    --accent-foreground: 0, 0, 0;
+
+    --destructive: 239, 68, 68;
+    --destructive-foreground: 255, 255, 255;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background-rgb: 0, 0, 0;
+    --foreground-rgb: 255, 255, 255;
+    --border-rgb: 75, 85, 99;
+
+    --card: 24, 24, 27;
+    --card-foreground: 255, 255, 255;
+
+    --primary: 79, 70, 229;
+    --primary-foreground: 255, 255, 255;
+
+    --secondary: 39, 39, 42;
+    --secondary-foreground: 255, 255, 255;
+
+    --muted: 39, 39, 42;
+    --muted-foreground: 161, 161, 170;
+
+    --accent: 39, 39, 42;
+    --accent-foreground: 255, 255, 255;
+
+    --destructive: 239, 68, 68;
+    --destructive-foreground: 255, 255, 255;
+  }
+}
+
+.bg-grid-pattern {
+  background-image: linear-gradient(to right, #e5e7eb 1px, transparent 1px),
+    linear-gradient(to bottom, #e5e7eb 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.animate-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+.hover-fade {
+  opacity: 0.2;
+  transition-property: opacity;
+  transition-duration: 700ms;
+  transition-timing-function: ease-in-out;
+}
+
+.group:hover .hover-fade {
+  opacity: 0.3;
+}
+
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+    opacity: 0.3;
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+    opacity: 0.4;
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+    opacity: 0.3;
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+@keyframes text-gradient {
+  0% {
+    background-position: 0% 50%;
+    background-size: 200% 200%;
+  }
+  50% {
+    background-position: 100% 50%;
+    background-size: 200% 200%;
+  }
+  100% {
+    background-position: 0% 50%;
+    background-size: 200% 200%;
+  }
+}
+
+.animate-text-gradient {
+  animation: text-gradient 6s ease infinite;
+  background-size: 200% 200%;
+}
+
+.animate-tilt {
+  animation: tilt 10s infinite linear;
+}
+
+@keyframes tilt {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(1deg);
+  }
+  75% {
+    transform: rotate(-1deg);
+  }
+}
+.animate-tilt {
+  animation: tilt 10s infinite linear;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 8s infinite;
+}

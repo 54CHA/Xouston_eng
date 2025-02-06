@@ -1,0 +1,11 @@
+.titleGradient {
+    filter: blur(64px);
+    @apply
+    absolute
+    -inset-x-4
+    -inset-y-2
+    bg-gradient-to-r
+    from-indigo-500/20
+    via-purple-500/10
+    to-emerald-500/20
+}
