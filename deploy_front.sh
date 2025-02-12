@@ -2,7 +2,7 @@
 
 SESSION_NAME="eng"
 REPO_DIR="$HOME/github/xo-eng"
-GIT_REPO_URL="https://github.com/54CHA/Xouston_eng.git"
+GIT_REPO_URL="https://github.com/54CHA/Xouston_eng"
 
 # Функция для выполнения команд в tmux
 tmux_send() {

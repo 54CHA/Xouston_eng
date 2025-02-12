@@ -4,11 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build -p 3001",
-    "start": "next start -p 3001",
+    "build": "next build",
+    "start": "next start",
     "lint": "next lint",
-    "deploy": "next build && npx serve@latest out -p 3001"
-
+    "deploy": "next build && npx serve@latest out"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
