@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "next build && npx serve@latest out"
+    "deploy": "NODE_OPTIONS='--max-old-space-size=4096' next build && npx serve@latest out"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
