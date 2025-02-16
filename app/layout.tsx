@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -9,16 +9,27 @@ import YandexMetrika from "@/components/YandexMetrika";
 
 const inter = Inter({ subsets: ["latin"] });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  themeColor: [
+    { media: "(prefers-color-scheme: dark)", color: "#000000" },
+    { media: "(prefers-color-scheme: light)", color: "#000000" },
+  ],
+};
+
 export const metadata: Metadata = {
-  title: "Xouston - Digital Lab | Разработка сайтов и приложений",
+  metadataBase: new URL("https://xouston.com"),
+  title: "Xouston - Digital Lab | Web & Mobile Development",
   description:
-    "Создаем современные веб-сайты, мобильные приложения и Telegram Mini Apps. Профессиональная разработка цифровых решений для бизнеса.",
+    "Creating modern websites, mobile applications and Telegram Mini Apps. Professional development of digital solutions for business.",
   keywords:
-    "разработка сайтов, веб-приложения, мобильные приложения, telegram mini apps, digital agency, веб-студия",
+    "web development, web applications, mobile apps, telegram mini apps, digital agency, web studio",
   openGraph: {
-    title: "Xouston - Digital Lab | Разработка сайтов и приложений",
+    title: "Xouston - Digital Lab | Web & App Development",
     description:
-      "Создаем современные веб-сайты, мобильные приложения и Telegram Mini Apps. Профессиональная разработка цифровых решений для бизнеса.",
+      "Creating modern websites, mobile applications and Telegram Mini Apps. Professional development of digital solutions for business.",
     url: "https://xouston.com",
     siteName: "Xouston Digital Lab",
     images: [
@@ -26,10 +37,10 @@ export const metadata: Metadata = {
         url: "/xouston_logo.png",
         width: 1200,
         height: 630,
-        alt: "Xouston Digital Lab - Разработка цифровых решений",
+        alt: "Xouston Digital Lab - Digital Solutions Development",
       },
     ],
-    locale: "ru_RU",
+    locale: "en_US",
     type: "website",
   },
   robots: {
@@ -52,12 +63,6 @@ export const metadata: Metadata = {
   },
   authors: [{ name: "Xouston Digital Lab" }],
   category: "technology",
-  themeColor: "#000000",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-  },
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
@@ -72,7 +77,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ru" suppressHydrationWarning className="dark">
+    <html lang="en" suppressHydrationWarning className="dark">
       <head>
         <meta name="theme-color" content="#000000" />
         <meta name="apple-mobile-web-app-capable" content="yes" />

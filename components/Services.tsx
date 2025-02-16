@@ -53,7 +53,7 @@ const services = [
     ],
   },
   {
-    title: "Telegram/VK Mini Apps",
+    title: "Telegram Mini Apps",
     description:
       "We create mini-applications for Telegram with rich functionality and bot integration",
     delay: 0.4,
@@ -260,7 +260,7 @@ export default function Services() {
                       {/* Arrow indicator */}
                     </div>
                     <div className="absolute bottom-5 right-10 flex items-center text-white/60 group-hover:text-white transition-colors">
-                      <span className="text-sm">Подробнее</span>
+                      <span className="text-sm">More info</span>
                       <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
                     </div>
                   </div>

@@ -72,7 +72,6 @@ export default function Navbar() {
         className={`mx-auto transition-all duration-300 relative
         ${scrolled ? "max-w-5xl py-2" : "max-w-7xl py-4"}`}
       >
-
         <div className="absolute inset-0 bg-black/40 backdrop-blur-lg rounded-full" />
         <div
           className={`absolute inset-x-0 -bottom-px h-[1px] bg-gradient-to-r 
@@ -83,7 +82,7 @@ export default function Navbar() {
         <div className="relative mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             <motion.a
-              href="#"
+              href="/"
               className="flex items-center space-x-3 group"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}

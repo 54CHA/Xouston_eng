@@ -216,7 +216,7 @@ export default function Contact() {
                               })
                             }
                             className="w-full px-3 sm:px-4 py-2 sm:py-2.5 bg-white/10 backdrop-blur-md border border-white/20 
-                              rounded-lg focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 
+                              rounded-lg focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none 
                               text-white placeholder-white/50 text-sm sm:text-base shadow-lg 
                               transition-all hover:bg-white/15"
                             placeholder={field.placeholder}
@@ -239,7 +239,7 @@ export default function Contact() {
                             })
                           }
                           className="w-full px-3 sm:px-4 py-2 sm:py-2.5 bg-white/10 backdrop-blur-md border border-white/20 
-                            rounded-lg focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 
+                            rounded-lg focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none
                             text-white placeholder-white/50 text-sm sm:text-base shadow-lg 
                             transition-all hover:bg-white/15"
                           placeholder="Tell us in general terms, we'll discuss details personally..."
